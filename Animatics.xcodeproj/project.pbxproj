@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6932F7CB1DCA413100979ACC /* Animatics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6932F7C11DCA413100979ACC /* Animatics.framework */; };
+		6932F7D01DCA413100979ACC /* AnimaticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7CF1DCA413100979ACC /* AnimaticsTests.swift */; };
+		6932F7D21DCA413100979ACC /* Animatics.h in Headers */ = {isa = PBXBuildFile; fileRef = 6932F7C41DCA413100979ACC /* Animatics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6932F7CC1DCA413100979ACC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6932F7B81DCA413100979ACC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6932F7C01DCA413100979ACC;
+			remoteInfo = Animatics;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6932F7C11DCA413100979ACC /* Animatics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Animatics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6932F7C41DCA413100979ACC /* Animatics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animatics.h; sourceTree = "<group>"; };
+		6932F7C51DCA413100979ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6932F7CA1DCA413100979ACC /* AnimaticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimaticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6932F7CF1DCA413100979ACC /* AnimaticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimaticsTests.swift; sourceTree = "<group>"; };
+		6932F7D11DCA413100979ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6932F7BD1DCA413100979ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6932F7C71DCA413100979ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6932F7CB1DCA413100979ACC /* Animatics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6932F7B71DCA413100979ACC = {
+			isa = PBXGroup;
+			children = (
+				6932F7C31DCA413100979ACC /* Animatics */,
+				6932F7CE1DCA413100979ACC /* AnimaticsTests */,
+				6932F7C21DCA413100979ACC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6932F7C21DCA413100979ACC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6932F7C11DCA413100979ACC /* Animatics.framework */,
+				6932F7CA1DCA413100979ACC /* AnimaticsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6932F7C31DCA413100979ACC /* Animatics */ = {
+			isa = PBXGroup;
+			children = (
+				6932F7C41DCA413100979ACC /* Animatics.h */,
+				6932F7C51DCA413100979ACC /* Info.plist */,
+			);
+			path = Animatics;
+			sourceTree = "<group>";
+		};
+		6932F7CE1DCA413100979ACC /* AnimaticsTests */ = {
+			isa = PBXGroup;
+			children = (
+				6932F7CF1DCA413100979ACC /* AnimaticsTests.swift */,
+				6932F7D11DCA413100979ACC /* Info.plist */,
+			);
+			path = AnimaticsTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6932F7BE1DCA413100979ACC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6932F7D21DCA413100979ACC /* Animatics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6932F7C01DCA413100979ACC /* Animatics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6932F7D51DCA413100979ACC /* Build configuration list for PBXNativeTarget "Animatics" */;
+			buildPhases = (
+				6932F7BC1DCA413100979ACC /* Sources */,
+				6932F7BD1DCA413100979ACC /* Frameworks */,
+				6932F7BE1DCA413100979ACC /* Headers */,
+				6932F7BF1DCA413100979ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Animatics;
+			productName = Animatics;
+			productReference = 6932F7C11DCA413100979ACC /* Animatics.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6932F7C91DCA413100979ACC /* AnimaticsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6932F7D81DCA413100979ACC /* Build configuration list for PBXNativeTarget "AnimaticsTests" */;
+			buildPhases = (
+				6932F7C61DCA413100979ACC /* Sources */,
+				6932F7C71DCA413100979ACC /* Frameworks */,
+				6932F7C81DCA413100979ACC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6932F7CD1DCA413100979ACC /* PBXTargetDependency */,
+			);
+			name = AnimaticsTests;
+			productName = AnimaticsTests;
+			productReference = 6932F7CA1DCA413100979ACC /* AnimaticsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6932F7B81DCA413100979ACC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Anvics;
+				TargetAttributes = {
+					6932F7C01DCA413100979ACC = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5F2E8FXC4R;
+						ProvisioningStyle = Automatic;
+					};
+					6932F7C91DCA413100979ACC = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5F2E8FXC4R;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6932F7BB1DCA413100979ACC /* Build configuration list for PBXProject "Animatics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6932F7B71DCA413100979ACC;
+			productRefGroup = 6932F7C21DCA413100979ACC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6932F7C01DCA413100979ACC /* Animatics */,
+				6932F7C91DCA413100979ACC /* AnimaticsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6932F7BF1DCA413100979ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6932F7C81DCA413100979ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6932F7BC1DCA413100979ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6932F7C61DCA413100979ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6932F7D01DCA413100979ACC /* AnimaticsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6932F7CD1DCA413100979ACC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6932F7C01DCA413100979ACC /* Animatics */;
+			targetProxy = 6932F7CC1DCA413100979ACC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6932F7D31DCA413100979ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6932F7D41DCA413100979ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6932F7D61DCA413100979ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5F2E8FXC4R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Animatics/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Anvics.Animatics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6932F7D71DCA413100979ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5F2E8FXC4R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Animatics/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Anvics.Animatics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6932F7D91DCA413100979ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5F2E8FXC4R;
+				INFOPLIST_FILE = AnimaticsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Anvics.AnimaticsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6932F7DA1DCA413100979ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5F2E8FXC4R;
+				INFOPLIST_FILE = AnimaticsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Anvics.AnimaticsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6932F7BB1DCA413100979ACC /* Build configuration list for PBXProject "Animatics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6932F7D31DCA413100979ACC /* Debug */,
+				6932F7D41DCA413100979ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6932F7D51DCA413100979ACC /* Build configuration list for PBXNativeTarget "Animatics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6932F7D61DCA413100979ACC /* Debug */,
+				6932F7D71DCA413100979ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6932F7D81DCA413100979ACC /* Build configuration list for PBXNativeTarget "AnimaticsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6932F7D91DCA413100979ACC /* Debug */,
+				6932F7DA1DCA413100979ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6932F7B81DCA413100979ACC /* Project object */;
+}
