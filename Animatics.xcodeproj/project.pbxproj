@@ -10,6 +10,19 @@
 		6932F7CB1DCA413100979ACC /* Animatics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6932F7C11DCA413100979ACC /* Animatics.framework */; };
 		6932F7D01DCA413100979ACC /* AnimaticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7CF1DCA413100979ACC /* AnimaticsTests.swift */; };
 		6932F7D21DCA413100979ACC /* Animatics.h in Headers */ = {isa = PBXBuildFile; fileRef = 6932F7C41DCA413100979ACC /* Animatics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6932F7ED1DCA41C700979ACC /* ColorAnimatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7DC1DCA41C700979ACC /* ColorAnimatics.swift */; };
+		6932F7EE1DCA41C700979ACC /* ConstraintAnimatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7DD1DCA41C700979ACC /* ConstraintAnimatics.swift */; };
+		6932F7EF1DCA41C700979ACC /* ImageViewAnimatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7DE1DCA41C700979ACC /* ImageViewAnimatics.swift */; };
+		6932F7F01DCA41C700979ACC /* LayerAnimatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7DF1DCA41C700979ACC /* LayerAnimatics.swift */; };
+		6932F7F11DCA41C700979ACC /* ShapeLayerAnimatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7E01DCA41C700979ACC /* ShapeLayerAnimatics.swift */; };
+		6932F7F21DCA41C700979ACC /* TransformAnimatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7E11DCA41C700979ACC /* TransformAnimatics.swift */; };
+		6932F7F31DCA41C700979ACC /* ViewBaseAnimatics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7E21DCA41C700979ACC /* ViewBaseAnimatics.swift */; };
+		6932F7F41DCA41C700979ACC /* AnimaticsContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7E41DCA41C700979ACC /* AnimaticsContainers.swift */; };
+		6932F7F61DCA41C700979ACC /* AnimaticsFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7E61DCA41C700979ACC /* AnimaticsFoundation.swift */; };
+		6932F7F71DCA41C700979ACC /* AnimaticsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7E71DCA41C700979ACC /* AnimaticsSettings.swift */; };
+		6932F7F81DCA41C700979ACC /* AnimationPerformers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7E81DCA41C700979ACC /* AnimationPerformers.swift */; };
+		6932F7F91DCA41C700979ACC /* MainRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7EA1DCA41C700979ACC /* MainRecipes.swift */; };
+		6932F7FA1DCA41C700979ACC /* ViewFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932F7EC1DCA41C700979ACC /* ViewFilters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +42,19 @@
 		6932F7CA1DCA413100979ACC /* AnimaticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimaticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6932F7CF1DCA413100979ACC /* AnimaticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimaticsTests.swift; sourceTree = "<group>"; };
 		6932F7D11DCA413100979ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6932F7DC1DCA41C700979ACC /* ColorAnimatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAnimatics.swift; sourceTree = "<group>"; };
+		6932F7DD1DCA41C700979ACC /* ConstraintAnimatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAnimatics.swift; sourceTree = "<group>"; };
+		6932F7DE1DCA41C700979ACC /* ImageViewAnimatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewAnimatics.swift; sourceTree = "<group>"; };
+		6932F7DF1DCA41C700979ACC /* LayerAnimatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimatics.swift; sourceTree = "<group>"; };
+		6932F7E01DCA41C700979ACC /* ShapeLayerAnimatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeLayerAnimatics.swift; sourceTree = "<group>"; };
+		6932F7E11DCA41C700979ACC /* TransformAnimatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformAnimatics.swift; sourceTree = "<group>"; };
+		6932F7E21DCA41C700979ACC /* ViewBaseAnimatics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBaseAnimatics.swift; sourceTree = "<group>"; };
+		6932F7E41DCA41C700979ACC /* AnimaticsContainers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimaticsContainers.swift; sourceTree = "<group>"; };
+		6932F7E61DCA41C700979ACC /* AnimaticsFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimaticsFoundation.swift; sourceTree = "<group>"; };
+		6932F7E71DCA41C700979ACC /* AnimaticsSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimaticsSettings.swift; sourceTree = "<group>"; };
+		6932F7E81DCA41C700979ACC /* AnimationPerformers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationPerformers.swift; sourceTree = "<group>"; };
+		6932F7EA1DCA41C700979ACC /* MainRecipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRecipes.swift; sourceTree = "<group>"; };
+		6932F7EC1DCA41C700979ACC /* ViewFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewFilters.swift; path = ../V2/ViewFilters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +97,9 @@
 		6932F7C31DCA413100979ACC /* Animatics */ = {
 			isa = PBXGroup;
 			children = (
+				6932F7DB1DCA41C700979ACC /* Animators */,
+				6932F7E31DCA41C700979ACC /* Foundation */,
+				6932F7E91DCA41C700979ACC /* Recipes */,
 				6932F7C41DCA413100979ACC /* Animatics.h */,
 				6932F7C51DCA413100979ACC /* Info.plist */,
 			);
@@ -84,6 +113,40 @@
 				6932F7D11DCA413100979ACC /* Info.plist */,
 			);
 			path = AnimaticsTests;
+			sourceTree = "<group>";
+		};
+		6932F7DB1DCA41C700979ACC /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				6932F7DC1DCA41C700979ACC /* ColorAnimatics.swift */,
+				6932F7DD1DCA41C700979ACC /* ConstraintAnimatics.swift */,
+				6932F7DE1DCA41C700979ACC /* ImageViewAnimatics.swift */,
+				6932F7DF1DCA41C700979ACC /* LayerAnimatics.swift */,
+				6932F7E01DCA41C700979ACC /* ShapeLayerAnimatics.swift */,
+				6932F7E11DCA41C700979ACC /* TransformAnimatics.swift */,
+				6932F7E21DCA41C700979ACC /* ViewBaseAnimatics.swift */,
+			);
+			path = Animators;
+			sourceTree = "<group>";
+		};
+		6932F7E31DCA41C700979ACC /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				6932F7E41DCA41C700979ACC /* AnimaticsContainers.swift */,
+				6932F7E61DCA41C700979ACC /* AnimaticsFoundation.swift */,
+				6932F7E71DCA41C700979ACC /* AnimaticsSettings.swift */,
+				6932F7E81DCA41C700979ACC /* AnimationPerformers.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		6932F7E91DCA41C700979ACC /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				6932F7EC1DCA41C700979ACC /* ViewFilters.swift */,
+				6932F7EA1DCA41C700979ACC /* MainRecipes.swift */,
+			);
+			path = Recipes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,11 +212,13 @@
 					6932F7C01DCA413100979ACC = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5F2E8FXC4R;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					6932F7C91DCA413100979ACC = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5F2E8FXC4R;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -198,6 +263,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6932F7F21DCA41C700979ACC /* TransformAnimatics.swift in Sources */,
+				6932F7F31DCA41C700979ACC /* ViewBaseAnimatics.swift in Sources */,
+				6932F7F71DCA41C700979ACC /* AnimaticsSettings.swift in Sources */,
+				6932F7F11DCA41C700979ACC /* ShapeLayerAnimatics.swift in Sources */,
+				6932F7F81DCA41C700979ACC /* AnimationPerformers.swift in Sources */,
+				6932F7F61DCA41C700979ACC /* AnimaticsFoundation.swift in Sources */,
+				6932F7F41DCA41C700979ACC /* AnimaticsContainers.swift in Sources */,
+				6932F7FA1DCA41C700979ACC /* ViewFilters.swift in Sources */,
+				6932F7EE1DCA41C700979ACC /* ConstraintAnimatics.swift in Sources */,
+				6932F7F91DCA41C700979ACC /* MainRecipes.swift in Sources */,
+				6932F7F01DCA41C700979ACC /* LayerAnimatics.swift in Sources */,
+				6932F7ED1DCA41C700979ACC /* ColorAnimatics.swift in Sources */,
+				6932F7EF1DCA41C700979ACC /* ImageViewAnimatics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +438,7 @@
 		6932F7D91DCA413100979ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5F2E8FXC4R;
 				INFOPLIST_FILE = AnimaticsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +451,7 @@
 		6932F7DA1DCA413100979ACC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 5F2E8FXC4R;
 				INFOPLIST_FILE = AnimaticsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
