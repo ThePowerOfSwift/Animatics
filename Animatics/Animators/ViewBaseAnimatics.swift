@@ -9,111 +9,111 @@
 import Foundation
 import UIKit
 
-class ViewFloatAnimatics: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = CGFloat
+public class ViewFloatAnimatics: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = CGFloat
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _updateForTarget(_ t: TargetType){ fatalError() }
-    func _currentValue(_ target: TargetType) -> ValueType{ fatalError() }
+    public func _updateForTarget(_ t: TargetType){ fatalError() }
+    public func _currentValue(_ target: TargetType) -> ValueType{ fatalError() }
 }
 
-class XAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.frame.origin.x = value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin.x }
+public class XAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.frame.origin.x = value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin.x }
 }
 
-class DXAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.frame.origin.x += value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin.x }
+public class DXAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.frame.origin.x += value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin.x }
 }
 
-class YAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.frame.origin.y = value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin.y }
+public class YAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.frame.origin.y = value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin.y }
 }
 
-class DYAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.frame.origin.y += value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin.y }
+public class DYAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.frame.origin.y += value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin.y }
 }
 
-class WidthAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.frame.size.width = value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size.width }
+public class WidthAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.frame.size.width = value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size.width }
 }
 
-class DWidthAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.frame.size.width += value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size.width }
+public class DWidthAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.frame.size.width += value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size.width }
 }
 
-class HeightAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.frame.size.height = value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size.height }
+public class HeightAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.frame.size.height = value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size.height }
 }
 
-class DHeightAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.frame.size.height += value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size.height }
+public class DHeightAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.frame.size.height += value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size.height }
 }
 
-class AlphaAnimator: ViewFloatAnimatics {
-    override func _updateForTarget(_ t: TargetType) { t.alpha = value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.alpha }
+public class AlphaAnimator: ViewFloatAnimatics {
+    override public func _updateForTarget(_ t: TargetType) { t.alpha = value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.alpha }
 }
 
 
-class ViewPointAnimatics: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = CGPoint
+public class ViewPointAnimatics: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = CGPoint
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _updateForTarget(_ t: TargetType){ fatalError() }
-    func _currentValue(_ target: TargetType) -> ValueType{ fatalError() }
+    public func _updateForTarget(_ t: TargetType){ fatalError() }
+    public func _currentValue(_ target: TargetType) -> ValueType{ fatalError() }
 }
 
-class OriginAnimator: ViewPointAnimatics {
-    override func _updateForTarget(_ t: TargetType) { t.frame.origin = value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin }
+public class OriginAnimator: ViewPointAnimatics {
+    override public func _updateForTarget(_ t: TargetType) { t.frame.origin = value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin }
 }
 
-class DOriginAnimator: ViewPointAnimatics {
-    override func _updateForTarget(_ t: TargetType) { t.frame.origin.x += value.x; t.frame.origin.y += value.y }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin }
+public class DOriginAnimator: ViewPointAnimatics {
+    override public func _updateForTarget(_ t: TargetType) { t.frame.origin.x += value.x; t.frame.origin.y += value.y }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.origin }
 }
 
-class CenterAnimator: ViewPointAnimatics {
-    override func _updateForTarget(_ t: TargetType) { t.center = value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.center }
+public class CenterAnimator: ViewPointAnimatics {
+    override public func _updateForTarget(_ t: TargetType) { t.center = value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.center }
 }
 
-class SizeAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = CGSize
+public class SizeAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = CGSize
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _updateForTarget(_ t: TargetType){ t.frame.size = value }
-    func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size }
+    public func _updateForTarget(_ t: TargetType){ t.frame.size = value }
+    public func _currentValue(_ target: TargetType) -> ValueType { return target.frame.size }
 }
 
-class FrameAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = CGRect
+public class FrameAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = CGRect
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _updateForTarget(_ t: TargetType){ t.frame = value }
-    func _currentValue(_ target: TargetType) -> ValueType { return target.frame }
+    public func _updateForTarget(_ t: TargetType){ t.frame = value }
+    public func _currentValue(_ target: TargetType) -> ValueType { return target.frame }
 }

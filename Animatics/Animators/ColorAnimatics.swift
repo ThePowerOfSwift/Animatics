@@ -9,24 +9,24 @@
 import Foundation
 import UIKit
 
-class ColorViewAnimatics: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = UIColor
+public class ColorViewAnimatics: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = UIColor
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _updateForTarget(_ t: TargetType){ fatalError() }
-    func _currentValue(_ target: TargetType) -> ValueType{ fatalError() }
+    public func _updateForTarget(_ t: TargetType){ fatalError() }
+    public func _currentValue(_ target: TargetType) -> ValueType{ fatalError() }
 }
 
-class BackgroundColorAnimator: ColorViewAnimatics {
-    override func _updateForTarget(_ t: TargetType) { t.backgroundColor = value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.backgroundColor! }
+public class BackgroundColorAnimator: ColorViewAnimatics {
+    override public func _updateForTarget(_ t: TargetType) { t.backgroundColor = value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.backgroundColor! }
 }
 
-class TintColorAnimator: ColorViewAnimatics {
-    override func _updateForTarget(_ t: TargetType) { t.tintColor = value }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.tintColor }
+public class TintColorAnimator: ColorViewAnimatics {
+    override public func _updateForTarget(_ t: TargetType) { t.tintColor = value }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.tintColor }
 }

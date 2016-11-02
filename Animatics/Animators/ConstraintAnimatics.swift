@@ -9,26 +9,26 @@
 import Foundation
 import UIKit
 
-class ConstraintAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
-    typealias TargetType = NSLayoutConstraint
-    typealias ValueType = CGFloat
+public class ConstraintAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
+    public typealias TargetType = NSLayoutConstraint
+    public typealias ValueType = CGFloat
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _updateForTarget(_ t: TargetType){
+    public func _updateForTarget(_ t: TargetType){
         t.constant = value
         (t.firstItem as? UIView)?.layoutIfNeeded()
         (t.secondItem as? UIView)?.layoutIfNeeded()
     }
     
-    func _cancelAnimation(_ t: TargetType, shouldShowFinalState: Bool) {
+    public func _cancelAnimation(_ t: TargetType, shouldShowFinalState: Bool) {
         (t.firstItem as? UIView)?.layer.removeAllAnimations()
         (t.secondItem as? UIView)?.layer.removeAllAnimations()
         if shouldShowFinalState { _updateForTarget(t) }
     }
     
-    func _currentValue(_ target: TargetType) -> ValueType { return target.constant }
+    public func _currentValue(_ target: TargetType) -> ValueType { return target.constant }
     
 }

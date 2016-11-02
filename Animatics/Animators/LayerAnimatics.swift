@@ -9,75 +9,75 @@
 import Foundation
 import UIKit
 
-class LayerFloatAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = CGFloat
+public class LayerFloatAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = CGFloat
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
+    public func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
 }
 
-class ShadowRadiusAnimator: LayerFloatAnimatics {
-    override func _animationKeyPath() -> String { return "shadowRadius" }
+public class ShadowRadiusAnimator: LayerFloatAnimatics {
+    override public func _animationKeyPath() -> String { return "shadowRadius" }
 }
 
-class ShadowOpacityAnimator: LayerFloatAnimatics {
-    override func _animationKeyPath() -> String { return "shadowOpacity" }
+public class ShadowOpacityAnimator: LayerFloatAnimatics {
+    override public func _animationKeyPath() -> String { return "shadowOpacity" }
 }
 
-class CornerRadiusAnimator: LayerFloatAnimatics {
-    override func _animationKeyPath() -> String { return "cornerRadius" }
+public class CornerRadiusAnimator: LayerFloatAnimatics {
+    override public func _animationKeyPath() -> String { return "cornerRadius" }
 }
 
-class BorderWidthAnimator: LayerFloatAnimatics {
-    override func _animationKeyPath() -> String { return "borderWidth" }
+public class BorderWidthAnimator: LayerFloatAnimatics {
+    override public func _animationKeyPath() -> String { return "borderWidth" }
 }
 
-class LayerTransformAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = CATransform3D
+public class LayerTransformAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = CATransform3D
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _animationKeyPath() -> String { return "transform" }
+    public func _animationKeyPath() -> String { return "transform" }
 }
 
-class LayerColorAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = CGColor
+public class LayerColorAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = CGColor
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
-    init(_ v: UIColor) { value = v.cgColor }
+    required public init(_ v: ValueType){ value = v }
+    public init(_ v: UIColor) { value = v.cgColor }
     
-    func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
+    public func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
 }
 
-class BorderColorAnimator: LayerColorAnimatics {
-    override func _animationKeyPath() -> String { return "borderColor" }
+public class BorderColorAnimator: LayerColorAnimatics {
+    override public func _animationKeyPath() -> String { return "borderColor" }
 }
 
-class GradientLayerPointAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
-    typealias TargetType = CAGradientLayer
-    typealias ValueType = CGPoint
+public class GradientLayerPointAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
+    public typealias TargetType = CAGradientLayer
+    public typealias ValueType = CGPoint
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
+    public func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
 }
 
-class GradientLayerStartPointAnimator: GradientLayerPointAnimatics {
-    override func _animationKeyPath() -> String { return "startPoint" }
+public class GradientLayerStartPointAnimator: GradientLayerPointAnimatics {
+    override public func _animationKeyPath() -> String { return "startPoint" }
 }
 
-class GradientLayerEndPointAnimator: GradientLayerPointAnimatics {
-    override func _animationKeyPath() -> String { return "endPoint" }
+public class GradientLayerEndPointAnimator: GradientLayerPointAnimatics {
+    override public func _animationKeyPath() -> String { return "endPoint" }
 }

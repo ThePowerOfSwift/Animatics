@@ -9,24 +9,24 @@
 import XCTest
 @testable import Animatics
 
-class AnimaticsTests: XCTestCase {
+public class AnimaticsTests: XCTestCase {
     
-    override func setUp() {
+    override public func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        // Put setup code here. This method is called before the invocation of each test method in the public class.
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override public func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the public class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    public func testExample() {
+        // This is an example of a public functional test case.
+        // Use XCTAssert and related public functions to verify your tests produce the correct results.
     }
     
-    func testPerformanceExample() {
+    public func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.

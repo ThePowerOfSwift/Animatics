@@ -9,66 +9,66 @@
 import Foundation
 import UIKit
 
-class ShapeLayerFloatAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
-    typealias TargetType = CAShapeLayer
-    typealias ValueType = CGFloat
+public class ShapeLayerFloatAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
+    public typealias TargetType = CAShapeLayer
+    public typealias ValueType = CGFloat
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
+    public func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
 }
 
-class StrokeStartAnimator: ShapeLayerFloatAnimatics{
-    override func _animationKeyPath() -> String { return "strokeStart" }
+public class StrokeStartAnimator: ShapeLayerFloatAnimatics{
+    override public func _animationKeyPath() -> String { return "strokeStart" }
 }
 
-class StrokeEndAnimator: ShapeLayerFloatAnimatics{
-    override func _animationKeyPath() -> String { return "strokeEnd" }
+public class StrokeEndAnimator: ShapeLayerFloatAnimatics{
+    override public func _animationKeyPath() -> String { return "strokeEnd" }
 }
 
-class LineWidthAnimator: ShapeLayerFloatAnimatics{
-    override func _animationKeyPath() -> String { return "lineWidth" }
+public class LineWidthAnimator: ShapeLayerFloatAnimatics{
+    override public func _animationKeyPath() -> String { return "lineWidth" }
 }
 
-class MitterLimitAnimator: ShapeLayerFloatAnimatics{
-    override func _animationKeyPath() -> String { return "miterLimit" }
+public class MitterLimitAnimator: ShapeLayerFloatAnimatics{
+    override public func _animationKeyPath() -> String { return "miterLimit" }
 }
 
-class LineDashPhaseAnimator: ShapeLayerFloatAnimatics{
-    override func _animationKeyPath() -> String { return "lineDashPhase" }
-}
-
-
-class ShapeLayerColorAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
-    typealias TargetType = CAShapeLayer
-    typealias ValueType = UIColor
-    
-    let value: ValueType
-    
-    required init(_ v: ValueType){ value = v }
-    
-    func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
-    func _newValue() -> AnyObject { return value.cgColor as AnyObject }
-}
-
-class FillColorAnimator: ShapeLayerColorAnimatics{
-    override func _animationKeyPath() -> String { return "fillColor" }
-}
-
-class StrokeColorAnimator: ShapeLayerColorAnimatics{
-    override func _animationKeyPath() -> String { return "strokeColor" }
+public class LineDashPhaseAnimator: ShapeLayerFloatAnimatics{
+    override public func _animationKeyPath() -> String { return "lineDashPhase" }
 }
 
 
-class PathAnimator: AnimationSettingsHolder, AnimaticsLayerChangesPerformer{
-    typealias TargetType = CAShapeLayer
-    typealias ValueType = CGPath
+public class ShapeLayerColorAnimatics: AnimationSettingsHolder, AnimaticsLayerChangesPerformer {
+    public typealias TargetType = CAShapeLayer
+    public typealias ValueType = UIColor
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _animationKeyPath() -> String { return "path" }
+    public func _animationKeyPath() -> String { fatalError("_animationKeyPath() is called but not implemented in \(type(of: self))") }
+    public func _newValue() -> AnyObject { return value.cgColor as AnyObject }
+}
+
+public class FillColorAnimator: ShapeLayerColorAnimatics{
+    override public func _animationKeyPath() -> String { return "fillColor" }
+}
+
+public class StrokeColorAnimator: ShapeLayerColorAnimatics{
+    override public func _animationKeyPath() -> String { return "strokeColor" }
+}
+
+
+public class PathAnimator: AnimationSettingsHolder, AnimaticsLayerChangesPerformer{
+    public typealias TargetType = CAShapeLayer
+    public typealias ValueType = CGPath
+    
+    public let value: ValueType
+    
+    required public init(_ v: ValueType){ value = v }
+    
+    public func _animationKeyPath() -> String { return "path" }
 }

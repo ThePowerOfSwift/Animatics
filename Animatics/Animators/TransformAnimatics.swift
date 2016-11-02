@@ -9,53 +9,53 @@
 import Foundation
 import UIKit
 
-class IdentityTransformAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = ()
+public class IdentityTransformAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = ()
     var a: Int = 7
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
-    func _updateForTarget(_ t: TargetType){ t.transform = CGAffineTransform.identity }
-    func _currentValue(_ target: TargetType) -> ValueType { return () }
+    required public init(_ v: ValueType){ value = v }
+    public func _updateForTarget(_ t: TargetType){ t.transform = CGAffineTransform.identity }
+    public func _currentValue(_ target: TargetType) -> ValueType { return () }
 }
 
-class ViewTransformAnimatics: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
-    typealias TargetType = UIView
-    typealias ValueType = CGAffineTransform
+public class ViewTransformAnimatics: AnimationSettingsHolder, AnimaticsViewChangesPerformer {
+    public typealias TargetType = UIView
+    public typealias ValueType = CGAffineTransform
     
-    let value: ValueType
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
+    required public init(_ v: ValueType){ value = v }
     
-    func _updateForTarget(_ t: TargetType){ fatalError() }
-    func _currentValue(_ target: TargetType) -> ValueType { return target.transform }
+    public func _updateForTarget(_ t: TargetType){ fatalError() }
+    public func _currentValue(_ target: TargetType) -> ValueType { return target.transform }
 }
 
-class TransformAnimator: ViewTransformAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.transform = value }
+public class TransformAnimator: ViewTransformAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.transform = value }
 }
 
-class AdditiveTransformAnimator: ViewTransformAnimatics {
-    override func _updateForTarget(_ t: TargetType) { t.transform = t.transform.concatenating(value) }
+public class AdditiveTransformAnimator: ViewTransformAnimatics {
+    override public func _updateForTarget(_ t: TargetType) { t.transform = t.transform.concatenating(value) }
 }
 
-class ScaleAnimator: ViewFloatAnimatics {
-    override func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(scaleX: value, y: value) }
-    override func _currentValue(_ target: TargetType) -> ValueType {
+public class ScaleAnimator: ViewFloatAnimatics {
+    override public func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(scaleX: value, y: value) }
+    override public func _currentValue(_ target: TargetType) -> ValueType {
         let t = target.transform
         return sqrt(t.a*t.a + t.c*t.c)
     }
 }
 
-class ScaleXYAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer{
-    typealias TargetType = UIView
-    typealias ValueType = (CGFloat, CGFloat)
-    let value: ValueType
+public class ScaleXYAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer{
+    public typealias TargetType = UIView
+    public typealias ValueType = (CGFloat, CGFloat)
+    public let value: ValueType
     
-    required init(_ v: ValueType){ value = v }
-    func _updateForTarget(_ t: TargetType){ t.transform = CGAffineTransform(scaleX: value.0, y: value.1) }
-    func _currentValue(_ target: TargetType) -> ValueType {
+    required public init(_ v: ValueType){ value = v }
+    public func _updateForTarget(_ t: TargetType){ t.transform = CGAffineTransform(scaleX: value.0, y: value.1) }
+    public func _currentValue(_ target: TargetType) -> ValueType {
         let t = target.transform
         let sx = sqrt(t.a*t.a + t.c*t.c)
         let sy = sqrt(t.b*t.b + t.d*t.d)
@@ -63,37 +63,37 @@ class ScaleXYAnimator: AnimationSettingsHolder, AnimaticsViewChangesPerformer{
     }
 }
 
-class AdditiveScaleAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.transform = t.transform.concatenating(CGAffineTransform(scaleX: value, y: value)) }
-    override func _currentValue(_ target: TargetType) -> ValueType {
+public class AdditiveScaleAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.transform = t.transform.concatenating(CGAffineTransform(scaleX: value, y: value)) }
+    override public func _currentValue(_ target: TargetType) -> ValueType {
         let t = target.transform
         return sqrt(t.a*t.a + t.c*t.c)
     }
 }
 
-class RotateAnimator: ViewFloatAnimatics {
-    convenience init(_ v: Double) { self.init(CGFloat(v)) }
-    override func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(rotationAngle: value) }
-    override func _currentValue(_ target: TargetType) -> ValueType { return atan2(target.transform.b, target.transform.a) }
+public class RotateAnimator: ViewFloatAnimatics {
+    convenience public init(_ v: Double) { self.init(CGFloat(v)) }
+    override public func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(rotationAngle: value) }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return atan2(target.transform.b, target.transform.a) }
 }
 
-class AdditiveRotateAnimator: ViewFloatAnimatics {
-    convenience init(_ v: Double) { self.init(CGFloat(v)) }
-    override func _updateForTarget(_ t: TargetType) { t.transform = t.transform.concatenating(CGAffineTransform(rotationAngle: value)) }
-    override func _currentValue(_ target: TargetType) -> ValueType { return atan2(target.transform.b, target.transform.a) }
+public class AdditiveRotateAnimator: ViewFloatAnimatics {
+    convenience public init(_ v: Double) { self.init(CGFloat(v)) }
+    override public func _updateForTarget(_ t: TargetType) { t.transform = t.transform.concatenating(CGAffineTransform(rotationAngle: value)) }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return atan2(target.transform.b, target.transform.a) }
 }
 
-class XTranslateAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(translationX: value, y: 0) }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.transform.tx }
+public class XTranslateAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(translationX: value, y: 0) }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.transform.tx }
 }
 
-class YTranslateAnimator: ViewFloatAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(translationX: 0, y: value) }
-    override func _currentValue(_ target: TargetType) -> ValueType { return target.transform.ty }
+public class YTranslateAnimator: ViewFloatAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(translationX: 0, y: value) }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return target.transform.ty }
 }
 
-class TranslateAnimator: ViewPointAnimatics{
-    override func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(translationX: value.x, y: value.y) }
-    override func _currentValue(_ target: TargetType) -> ValueType { return CGPoint(x: target.transform.tx, y: target.transform.ty) }
+public class TranslateAnimator: ViewPointAnimatics{
+    override public func _updateForTarget(_ t: TargetType) { t.transform = CGAffineTransform(translationX: value.x, y: value.y) }
+    override public func _currentValue(_ target: TargetType) -> ValueType { return CGPoint(x: target.transform.tx, y: target.transform.ty) }
 }

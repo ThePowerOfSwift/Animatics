@@ -9,39 +9,39 @@
 import Foundation
 import UIKit
 
-protocol AnimaticsViewChangesPerformer: Animatics{
+public protocol AnimaticsViewChangesPerformer: Animatics{
     func _updateForTarget(_ t: TargetType)
 }
 
 extension AnimaticsViewChangesPerformer{
-    func _animateWithTarget(_ t: TargetType, completion: AnimaticsCompletionBlock?){
+    public func _animateWithTarget(_ t: TargetType, completion: AnimaticsCompletionBlock?){
         ViewAnimationPerformer.sharedInstance.animate(self, target: t, completion: completion)
     }
-    func _performWithoutAnimationToTarget(_ t: TargetType){
+    public func _performWithoutAnimationToTarget(_ t: TargetType){
         _updateForTarget(t)
     }
 }
 
 extension AnimaticsViewChangesPerformer where TargetType: UIView{
-    func _cancelAnimation(_ t: TargetType, shouldShowFinalState: Bool) {
+    public func _cancelAnimation(_ t: TargetType, shouldShowFinalState: Bool) {
         t.layer.removeAllAnimations()
         if shouldShowFinalState { _updateForTarget(t) }
     }
 }
 
-final class ViewAnimationPerformer{
-    class var sharedInstance : ViewAnimationPerformer {
+final public class ViewAnimationPerformer{
+    public class var sharedInstance : ViewAnimationPerformer {
         struct Static {
             static let instance = ViewAnimationPerformer()
         }
         return Static.instance
     }
     
-    func animate<T: AnimaticsViewChangesPerformer>(_ animator: T, target: T.TargetType, completion: AnimaticsCompletionBlock?){
+    public func animate<T: AnimaticsViewChangesPerformer>(_ animator: T, target: T.TargetType, completion: AnimaticsCompletionBlock?){
         if animator._isSpring{
-            UIView.animate(withDuration: animator._duration, delay: animator._delay, usingSpringWithDamping: animator._springDumping, initialSpringVelocity: animator._springVelocity, options: animator._animationOptions, animations: { () -> Void in
+            UIView.animate(withDuration: animator._duration, delay: animator._delay, usingSpringWithDamping: animator._springDumping, initialSpringVelocity: animator._springVelocity, options: animator._animationOptions, animations: {
                 animator._updateForTarget(target)
-            }, completion: completion)
+            }, completion: completion)            
         }else{
             UIView.animate(withDuration: animator._duration, delay: animator._delay, options: animator._animationOptions, animations: { () -> Void in
                 animator._updateForTarget(target)
@@ -50,48 +50,48 @@ final class ViewAnimationPerformer{
     }
 }
 
-protocol AnimaticsLayerChangesPerformer: Animatics{
+public protocol AnimaticsLayerChangesPerformer: Animatics{
     func _animationKeyPath() -> String
     func _newValue() -> AnyObject
     func _layerForTarget(_ target: TargetType) -> CALayer
 }
 
 extension AnimaticsLayerChangesPerformer{
-    func _newValue() -> AnyObject { return value as AnyObject }
-    func _animateWithTarget(_ t: TargetType, completion: AnimaticsCompletionBlock?){
+    public func _newValue() -> AnyObject { return value as AnyObject }
+    public func _animateWithTarget(_ t: TargetType, completion: AnimaticsCompletionBlock?){
         LayerAnimationPerformer.sharedInstance.animate(self, target: _layerForTarget(t), completion: completion)
     }
-    func _performWithoutAnimationToTarget(_ t: TargetType) {
+    public func _performWithoutAnimationToTarget(_ t: TargetType) {
         _layerForTarget(t).setValue(_newValue(), forKeyPath: _animationKeyPath())
     }
     
-    func _cancelAnimation(_ t: TargetType, shouldShowFinalState: Bool) {
+    public func _cancelAnimation(_ t: TargetType, shouldShowFinalState: Bool) {
         _layerForTarget(t).removeAllAnimations()
         if shouldShowFinalState { _layerForTarget(t).setValue(_newValue(), forKeyPath: _animationKeyPath()) }
     }
     
-    func _currentValue(_ target: TargetType) -> ValueType {
+    public func _currentValue(_ target: TargetType) -> ValueType {
         return _layerForTarget(target).value(forKeyPath: _animationKeyPath()) as! ValueType
     }
 }
 
 extension AnimaticsLayerChangesPerformer where TargetType: UIView{
-    func _layerForTarget(_ target: TargetType) -> CALayer{ return target.layer }
+    public func _layerForTarget(_ target: TargetType) -> CALayer{ return target.layer }
 }
 
 extension AnimaticsLayerChangesPerformer where TargetType: CALayer{
-    func _layerForTarget(_ target: TargetType) -> CALayer{ return target }
+    public func _layerForTarget(_ target: TargetType) -> CALayer{ return target }
 }
 
-final class LayerAnimationPerformer{
-    class var sharedInstance : LayerAnimationPerformer {
+final public class LayerAnimationPerformer{
+    public class var sharedInstance : LayerAnimationPerformer {
         struct Static {
             static let instance = LayerAnimationPerformer()
         }
         return Static.instance
     }
     
-    func animate<T: AnimaticsLayerChangesPerformer, U: CALayer>(_ animator: T, target: U, completion: AnimaticsCompletionBlock?){
+    public func animate<T: AnimaticsLayerChangesPerformer, U: CALayer>(_ animator: T, target: U, completion: AnimaticsCompletionBlock?){
         let key = animator._animationKeyPath()
         
         func createAnimation() -> CABasicAnimation{

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIView{
-    func animatics_snapshotImage() -> UIImage{
+    public func animatics_snapshotImage() -> UIImage{
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0.0);
         let view = self
         view.layoutIfNeeded()
@@ -24,17 +24,17 @@ extension UIView{
     
 }
 
-class ViewFilterAndBackAnimator: AnimationSettingsHolder, Animatics {
-    typealias TargetType = UIView
-    typealias ValueType = Filter
+public class ViewFilterAndBackAnimator: AnimationSettingsHolder, Animatics {
+    public typealias TargetType = UIView
+    public typealias ValueType = Filter.Applyer
     
-    let value: ValueType
+    public let value: ValueType
     
     fileprivate var tmpImageView: UIImageView!
     
-    required init(_ v: @escaping ValueType){ value = v }
+    required public init(_ v: @escaping ValueType){ value = v }
     
-    func _animateWithTarget(_ t: TargetType, completion: AnimaticsCompletionBlock?){
+    public func _animateWithTarget(_ t: TargetType, completion: AnimaticsCompletionBlock?){
         let image = t.animatics_snapshotImage()
         let ciimage = CIImage(image: image)!
         tmpImageView = UIImageView(image: UIImage(ciImage: value(ciimage)))
@@ -48,11 +48,11 @@ class ViewFilterAndBackAnimator: AnimationSettingsHolder, Animatics {
         }
     }
     
-    func _performWithoutAnimationToTarget(_ t: TargetType) { }
+    public func _performWithoutAnimationToTarget(_ t: TargetType) { }
     
-    func _cancelAnimation(_ t: TargetType, shouldShowFinalState: Bool) {
+    public func _cancelAnimation(_ t: TargetType, shouldShowFinalState: Bool) {
         tmpImageView?.removeFromSuperview()
     }
     
-    func _currentValue(_ target: TargetType) -> ValueType { return value }
+    public func _currentValue(_ target: TargetType) -> ValueType { return value }
 }
