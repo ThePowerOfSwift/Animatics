@@ -41,7 +41,7 @@ final public class ViewAnimationPerformer{
         if animator._isSpring{
             UIView.animate(withDuration: animator._duration, delay: animator._delay, usingSpringWithDamping: animator._springDumping, initialSpringVelocity: animator._springVelocity, options: animator._animationOptions, animations: {
                 animator._updateForTarget(target)
-            }, completion: completion)            
+            }, completion: completion)
         }else{
             UIView.animate(withDuration: animator._duration, delay: animator._delay, options: animator._animationOptions, animations: { () -> Void in
                 animator._updateForTarget(target)
@@ -96,13 +96,13 @@ final public class LayerAnimationPerformer{
         
         func createAnimation() -> CABasicAnimation{
             if animator._isSpring{
-                //            if #available(iOS 9, *){
-                let animation = CASpringAnimation(keyPath: key)
-                animation.damping = animator._springDumping * 10
-                animation.initialVelocity = animator._springVelocity
-                animation.duration = animation.settlingDuration
-                return animation
-                //            }
+                if #available(iOS 9, *){
+                    let animation = CASpringAnimation(keyPath: key)
+                    animation.damping = animator._springDumping * 10
+                    animation.initialVelocity = animator._springVelocity
+                    animation.duration = animation.settlingDuration
+                    return animation
+                }
             }
             let animation = CABasicAnimation(keyPath: key)
             return animation
