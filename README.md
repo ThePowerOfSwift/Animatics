@@ -181,7 +181,12 @@ Pay attention to fact that CALayer animators are not supporing spring animation 
 
 ...and more to come!:)
 ##How to install?
-Just grab all .swift files and add them to your project
+###Using Carthage
+add folowing to your Cartfile:
+```
+github "Anvics/Animatics" ~> 1.0
+```
+
 ##Licence
 The MIT License (MIT)
 Copyright (c) 2015 Nikita Arkhipov, Anvics.
